@@ -514,7 +514,7 @@ func (z *Element) Exp(x Element, exponent ...uint64) *Element {
 // FromMont converts z in place (i.e. mutates) from Montgomery to regular representation
 // sets and returns z = z * 1
 func (z *Element) FromMont() *Element {
-	fromMontElement(z)
+	//fromMontElement(z)
 	return z
 }
 
@@ -527,7 +527,8 @@ func (z *Element) ToMont() *Element {
 		10108755138030829701,
 		150537098327114917,
 	}
-	mulAssignElement(z, &rSquare)
+	_ = rSquare
+//	mulAssignElement(z, &rSquare)
 	return z
 }
 
